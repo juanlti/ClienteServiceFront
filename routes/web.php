@@ -25,3 +25,8 @@ Route::get('/', function () {
 */
 
 Route::get('/',[ClientesController::class,'index'])->name('clientes.index');
+Route::get('/crearCliente',[ClientesController::class,'create'])->name('clientes.create');
+Route::post('/crearCliente',[ClientesController::class,'store'])->name('clientes.store');
+Route::get('/borrarCliente/{id}',[ClientesController::class,'destroy'])->name('cliente.destroy');
+Route::get('/mostrarCliente/{id}',[ClientesController::class,'show'])->name('clientes.mostrarCliente');
+Route::put('/actualizarCliente',[ClientesController::class,'update'])->name('cliente.update');
